@@ -7,4 +7,6 @@
     <string name="label_title_room">Paging with room as data source </string>
     <string name="label_title_loader">Paging with header and footer for showing loader</string>
     <string name="desc_doggo">doggo</string>
+    <string name="button_retry">Retry</string>
+    <string name="label_error">Something went wrong, please try try again</string>
 </resources>

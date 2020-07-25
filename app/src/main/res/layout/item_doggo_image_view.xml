@@ -6,13 +6,14 @@
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     app:cardCornerRadius="6dp"
-    app:cardElevation="4dp">
+    app:cardElevation="6dp">
 
     <ImageView
-        android:id="@+id/ivDoggo"
+        android:id="@+id/ivDoggoMain"
         android:layout_width="180dp"
         android:layout_height="180dp"
         android:contentDescription="@string/desc_doggo"
+        android:maxHeight="300dp"
         android:scaleType="centerCrop"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 

@@ -7,6 +7,6 @@ import retrofit2.http.Query
 interface DoggoApiService {
 
     @GET("v1/images/search")
-    suspend fun getDoggoImages(@Query("page") page: Int, @Query("size") size: Int): DoggoImageModel
+    suspend fun getDoggoImages(@Query("page") page: Int, @Query("limit") size: Int): List<DoggoImageModel>
 
 }
