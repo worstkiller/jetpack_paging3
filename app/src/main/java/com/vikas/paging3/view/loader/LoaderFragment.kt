@@ -7,7 +7,8 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.vikas.paging3.R
-import com.vikas.paging3.view.remote.adapter.LoaderStateAdapter
+import com.vikas.paging3.view.loader.adapter.LoaderDoggoImageAdapter
+import com.vikas.paging3.view.loader.adapter.LoaderStateAdapter
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch

@@ -1,4 +1,4 @@
-package com.vikas.paging3.view.remote.adapter
+package com.vikas.paging3.view.loader.adapter
 
 import android.view.LayoutInflater
 import android.view.View
