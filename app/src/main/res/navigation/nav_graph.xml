@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/remote">
+
+    <fragment
+        android:id="@+id/room"
+        android:name="com.vikas.paging3.view.room.RoomFragment"
+        tools:layout="@layout/fragment_room" />
+    <fragment
+        android:id="@+id/loader"
+        android:name="com.vikas.paging3.view.loader.LoaderFragment"
+        tools:layout="@layout/fragment_loader" />
+    <fragment
+        android:id="@+id/remote"
+        android:name="com.vikas.paging3.view.remote.RemoteFragment"
+        tools:layout="@layout/fragment_remote" />
+
+</navigation>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Paging3</string>
+    <string name="menu_remote">Remote</string>
+    <string name="menu_loader">Loader</string>
+    <string name="menu_room">Room</string>
+    <string name="label_title_remote">Paging with remote doggo api service as data source</string>
+    <string name="label_title_room">Paging with room as data source </string>
+    <string name="label_title_loader">Paging with header and footer for showing loader</string>
+    <string name="desc_doggo">doggo</string>
+</resources>
