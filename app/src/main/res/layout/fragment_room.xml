@@ -29,7 +29,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvDoggoRemote"
+        android:id="@+id/rvDoggoRoom"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:padding="16dp"
