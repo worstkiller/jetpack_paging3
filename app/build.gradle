@@ -49,8 +49,9 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
     implementation "androidx.room:room-runtime:$roomVersion"
-    implementation "androidx.paging:paging-runtime:$pagingVersion"
+    implementation "androidx.room:room-ktx:$roomVersion"
     kapt "androidx.room:room-compiler:$roomVersion"
+    implementation "androidx.paging:paging-runtime:$pagingVersion"
     implementation "androidx.navigation:navigation-fragment-ktx:$navigationComponent"
     implementation "androidx.navigation:navigation-ui-ktx:$navigationComponent"
 

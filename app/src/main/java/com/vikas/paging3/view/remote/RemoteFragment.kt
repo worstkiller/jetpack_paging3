@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import androidx.paging.ExperimentalPagingApi
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.vikas.paging3.R
@@ -16,6 +17,7 @@ import kotlinx.coroutines.launch
  * View to fetch the results from the remote api and directly shows in the recyclerview
  * with lazy pagination enabled
  */
+@ExperimentalPagingApi
 class RemoteFragment : Fragment(R.layout.fragment_remote) {
 
     lateinit var rvDoggoRemote: RecyclerView

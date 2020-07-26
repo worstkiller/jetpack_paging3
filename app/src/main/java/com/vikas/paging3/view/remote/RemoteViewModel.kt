@@ -2,6 +2,7 @@ package com.vikas.paging3.view.remote
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.paging.ExperimentalPagingApi
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import androidx.paging.map
@@ -10,6 +11,7 @@ import com.vikas.paging3.model.DoggoImageModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
+@ExperimentalPagingApi
 class RemoteViewModel(
     val repository: DoggoImagesRepository = DoggoImagesRepository.getInstance()
 ) : ViewModel() {

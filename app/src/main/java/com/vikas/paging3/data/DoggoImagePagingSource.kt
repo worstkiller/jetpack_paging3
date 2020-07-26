@@ -1,5 +1,6 @@
 package com.vikas.paging3.data
 
+import androidx.paging.ExperimentalPagingApi
 import androidx.paging.PagingSource
 import com.vikas.paging3.data.DoggoImagesRepository.Companion.DEFAULT_PAGE_INDEX
 import com.vikas.paging3.model.DoggoImageModel
@@ -10,6 +11,7 @@ import java.io.IOException
 /**
  * provides the data source for paging lib from api calls
  */
+@ExperimentalPagingApi
 class DoggoImagePagingSource(val doggoApiService: DoggoApiService) :
     PagingSource<Int, DoggoImageModel>() {
 

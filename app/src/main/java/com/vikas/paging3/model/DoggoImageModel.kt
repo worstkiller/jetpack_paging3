@@ -1,3 +1,7 @@
 package com.vikas.paging3.model
 
-data class DoggoImageModel(val id: String, val url: String)
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
+data class DoggoImageModel(@PrimaryKey val id: String, val url: String)
