@@ -1,14 +1,14 @@
 package com.vikas.paging3.data
 
-import androidx.paging.ExperimentalPagingApi
-import androidx.paging.Pager
-import androidx.paging.PagingConfig
-import androidx.paging.PagingData
+import androidx.lifecycle.LiveData
+import androidx.paging.*
+import androidx.paging.rxjava2.observable
 import com.vikas.paging3.model.DoggoImageModel
 import com.vikas.paging3.repository.local.AppDatabase
 import com.vikas.paging3.repository.local.LocalInjector
 import com.vikas.paging3.repository.remote.DoggoApiService
 import com.vikas.paging3.repository.remote.RemoteInjector
+import io.reactivex.Observable
 import kotlinx.coroutines.flow.Flow
 
 /**
@@ -38,6 +38,22 @@ class DoggoImagesRepository(
             config = pagingConfig,
             pagingSourceFactory = { DoggoImagePagingSource(doggoApiService) }
         ).flow
+    }
+
+    //for rxjava users
+    fun letDoggoImagesObservable(pagingConfig: PagingConfig = getDefaultPageConfig()): Observable<PagingData<DoggoImageModel>> {
+        return Pager(
+            config = pagingConfig,
+            pagingSourceFactory = { DoggoImagePagingSource(doggoApiService) }
+        ).observable
+    }
+
+    //for live data users
+    fun letDoggoImagesLiveData(pagingConfig: PagingConfig = getDefaultPageConfig()): LiveData<PagingData<DoggoImageModel>> {
+        return Pager(
+            config = pagingConfig,
+            pagingSourceFactory = { DoggoImagePagingSource(doggoApiService) }
+        ).liveData
     }
 
     /**

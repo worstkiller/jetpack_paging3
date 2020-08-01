@@ -51,9 +51,10 @@ dependencies {
     implementation "androidx.room:room-runtime:$roomVersion"
     implementation "androidx.room:room-ktx:$roomVersion"
     kapt "androidx.room:room-compiler:$roomVersion"
-    implementation "androidx.paging:paging-runtime:$pagingVersion"
     implementation "androidx.navigation:navigation-fragment-ktx:$navigationComponent"
     implementation "androidx.navigation:navigation-ui-ktx:$navigationComponent"
+    implementation "androidx.paging:paging-runtime:$pagingVersion"
+    implementation "androidx.paging:paging-rxjava2-ktx:$pagingVersion"
 
     //retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"

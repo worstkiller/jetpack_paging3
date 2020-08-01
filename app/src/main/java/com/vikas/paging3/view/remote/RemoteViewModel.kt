@@ -1,13 +1,14 @@
 package com.vikas.paging3.view.remote
 
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import androidx.paging.ExperimentalPagingApi
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import androidx.paging.map
+import androidx.paging.rxjava2.cachedIn
 import com.vikas.paging3.data.DoggoImagesRepository
 import com.vikas.paging3.model.DoggoImageModel
+import io.reactivex.Observable
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
@@ -22,6 +23,20 @@ class RemoteViewModel(
      */
     fun fetchDoggoImages(): Flow<PagingData<String>> {
         return repository.letDoggoImagesFlow()
+            .map { it.map { it.url } }
+            .cachedIn(viewModelScope)
+    }
+
+    //rxjava use case
+    fun fetchDoggoImagesObservable(): Observable<PagingData<String>> {
+        return repository.letDoggoImagesObservable()
+            .map { it.map { it.url } }
+            .cachedIn(viewModelScope)
+    }
+
+    //live data use case
+    fun fetchDoggoImagesLiveData(): LiveData<PagingData<String>> {
+        return repository.letDoggoImagesLiveData()
             .map { it.map { it.url } }
             .cachedIn(viewModelScope)
     }
