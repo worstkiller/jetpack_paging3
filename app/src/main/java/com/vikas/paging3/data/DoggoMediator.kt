@@ -89,7 +89,7 @@ class DoggoMediator(val doggoApiService: DoggoApiService, val appDatabase: AppDa
         return state.pages
             .lastOrNull { it.data.isNotEmpty() }
             ?.data?.lastOrNull()
-            ?.let { repo -> appDatabase.getRepoDao().remoteKeysDoggoId(repo.id) }
+            ?.let { doggo -> appDatabase.getRepoDao().remoteKeysDoggoId(doggo.id) }
     }
 
     /**
@@ -99,7 +99,7 @@ class DoggoMediator(val doggoApiService: DoggoApiService, val appDatabase: AppDa
         return state.pages
             .firstOrNull() { it.data.isNotEmpty() }
             ?.data?.firstOrNull()
-            ?.let { repo -> appDatabase.getRepoDao().remoteKeysDoggoId(repo.id) }
+            ?.let { doggo -> appDatabase.getRepoDao().remoteKeysDoggoId(doggo.id) }
     }
 
     /**
